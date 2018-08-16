@@ -4,12 +4,14 @@
     <tr>
         <th>Nome</th>
         <th>Salário</th>
+        <th>Bonus</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let employee of employees; let i=index;" [id]="'tr'+i">
         <td>{{employee.name}}</td>
         <td [style.color]="getSalaryColor(employee)" >{{employee.salary}}</td>
+        <td>{{employee.bonus}}</td>
     </tr>
     </tbody>
 </table>
