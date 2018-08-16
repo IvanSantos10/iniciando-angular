@@ -1,17 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'employee-new',
-  templateUrl: './employee-new.component.html',
-  styleUrls: ['./employee-new.component.css']
+    selector: 'employee-new',
+    templateUrl: './employee-new.component.html',
+    styleUrls: ['./employee-new.component.css']
 })
 export class EmployeeNewComponent implements OnInit {
 
-  name = 'Ivan Santos';
+    name = 'Ivan Santos';
+    employees = [];
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    addEmployee() {
+        this.employees.push(this.name);
+        console.log(this.employees);
+    }
 
 }
