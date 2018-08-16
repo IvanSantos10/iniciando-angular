@@ -7,9 +7,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let employee of employees">
+    <tr *ngFor="let employee of employees; let i=index;" [id]="'tr'+i">
         <td>{{employee.name}}</td>
-        <td>{{employee.salary}}</td>
+        <td [style.color]="getSalaryColor(employee)" >{{employee.salary}}</td>
     </tr>
     </tbody>
 </table>
